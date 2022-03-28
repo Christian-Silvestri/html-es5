@@ -1,0 +1,33 @@
+<!-- Dato il peso delle immagini eccessivo, la prima cosa da fare sarebbe stata quella di ridurre il peso senza perdere la qualità
+utilizzando dei tool che si possono trovare nel web-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Html esercizio 5</title>
+    <style>img{max-width:300px;}</style>
+</head>
+
+<body>
+    <figure>
+    <picture>
+        <source srcset="assets/business-man.webp" type="image/webp" alt="business-man"/> <!--i browser che supportano il formato webp visualizzerano l'elemento img1.webp-->
+        <source srcset="assets/business-man.jpg" type="image/jpeg" alt="business-man"/> <!--i browser che non supportano il formato webp visualizzeranno l'elemneto img.jpg-->
+        <img src="assets/business-man.jpg" alt="business-man"/> <!--i browser che non supportano il tag <picture> eseguiranno il fallback sul tag <img>-->
+    <figcaption>Business-man</figcaption>
+    </figure>   
+    </picture>
+    <figure>
+    <picture>
+        <source srcset="assets/ok-hand.webp" type="image/webp" alt="ok-hand"/>
+        <source srcset="ok-hand.jpg" type="image/jpg" alt="ok-hand"/>
+        <img src="assets/ok-hand.jpg" alt="ok-hand"/>
+    </picture>
+    <figcaption>Ok-hand</figcaption>
+    </figure>
+</body>
+
+</html>
